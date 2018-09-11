@@ -1,0 +1,42 @@
+{
+    "coord": {
+        "lon": -45.49,
+        "lat": -23.63
+    },
+    "weather": [
+        {
+            "id": 802,
+            "main": "Clouds",
+            "description": "scattered clouds",
+            "icon": "03d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 298.68,
+        "pressure": 1021,
+        "humidity": 53,
+        "temp_min": 297.15,
+        "temp_max": 300.15
+    },
+    "visibility": 9000,
+    "wind": {
+        "speed": 1.5,
+        "deg": 330
+    },
+    "clouds": {
+        "all": 44
+    },
+    "dt": 1534953600,
+    "sys": {
+        "type": 1,
+        "id": 4571,
+        "message": 0.004,
+        "country": "BR",
+        "sunrise": 1534929685,
+        "sunset": 1534970890
+    },
+    "id": 6322184,
+    "name": "Caraguatatuba",
+    "cod": 200
+}

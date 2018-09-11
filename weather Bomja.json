@@ -1,0 +1,44 @@
+{
+    "coord": {
+        "lon": -44.19,
+        "lat": -21.95
+    },
+    "weather": [
+        {
+            "id": 500,
+            "main": "Rain",
+            "description": "light rain",
+            "icon": "10d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 289.14,
+        "pressure": 913.23,
+        "humidity": 83,
+        "temp_min": 289.14,
+        "temp_max": 289.14,
+        "sea_level": 1037.02,
+        "grnd_level": 913.23
+    },
+    "wind": {
+        "speed": 1.52,
+        "deg": 145.504
+    },
+    "rain": {
+        "3h": 0.3025
+    },
+    "clouds": {
+        "all": 80
+    },
+    "dt": 1534529289,
+    "sys": {
+        "message": 0.0026,
+        "country": "BR",
+        "sunrise": 1534497514,
+        "sunset": 1534538578
+    },
+    "id": 3469455,
+    "name": "Bom Jardim de Minas",
+    "cod": 200
+}

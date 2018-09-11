@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/p5.js"></script>
+    <script src="sketch.js"></script>
+
+    <script type="text/javascript" src="bacias.js"></script>
+    <script type="text/javascript" src="getcep.js"></script>
+
+    <title>Página de utilidades</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div>
+        <h1 id="first_line">
+            <span style="color:darkslategrey;font-weight:bold;font-size: 14px"> Previsão do tempo nas cidades</span>
+        </h1>
+    </div>
+
+    <h3 id="dataAgora"> Atualizado em: </h3>
+
+
+    <br/>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3">
+                <h3>São Paulo</h3>
+                <div <span style="color:gray;font-weight:bold">
+                    <p id="spWeather"> --- </p>
+                    <table class="tg">
+                        <tr>
+                            <th class="tg-3bjo"></th>
+                            <th class="tg-8hy5">Temperatura</th>
+                            <th class="tg-8hy5">Precipitação</th>
+                        </tr>
+                        <tr>
+                            <td id="amanha" class="tg-3bjo" rowspan="2">Amanha</td>
+                            <td id="minSPamanha" class="tg-z7ot"></td>
+                            <td class="tg-3bjo"></td>
+                        </tr>
+                        <tr>
+                            <td id="maxSPamanha" class="tg-2w1e"></td>
+                            <td class="tg-3bjo"></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-0lax"></td>
+                            <td class="tg-0lax"></td>
+                            <td class="tg-0lax"></td>
+                        </tr>
+                        <tr>
+                            <td id="amanha1" class="tg-3bjo" rowspan="2">Amanha+1</td>
+                            <td id="minSPamanha1" class="tg-z7ot"></td>
+                            <td class="tg-3bjo"></td>
+                        </tr>
+                        <tr>
+                            <td id="maxSPamanha1" class="tg-2w1e"></td>
+                            <td class="tg-3bjo"></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-0lax"></td>
+                            <td class="tg-0lax"></td>
+                            <td class="tg-0lax"></td>
+                        </tr>
+                        <tr>
+                            <td id="amanha2" class="tg-3bjo" rowspan="2">Amanha+2</td>
+                            <td id="minSPamanha2" class="tg-z7ot"></td>
+                            <td class="tg-3bjo"></td>
+                        </tr>
+                        <tr>
+                            <td id="maxSPamanha2" class="tg-2w1e"></td>
+                            <td class="tg-3bjo"></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-0lax"></td>
+                            <td class="tg-0lax"></td>
+                            <td class="tg-0lax"></td>
+                        </tr>
+                        <tr>
+                            <td id="amanha3" class="tg-3bjo" rowspan="2">Amanha+3</td>
+                            <td id="minSPamanha3" class="tg-z7ot"></td>
+                            <td class="tg-3bjo"></td>
+                        </tr>
+                        <tr>
+                            <td id="maxSPamanha3" class="tg-2w1e"></td>
+                            <td class="tg-3bjo"></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-0lax"></td>
+                            <td class="tg-0lax"></td>
+                            <td class="tg-0lax"></td>
+                        </tr>
+                        <tr>
+                            <td id="amanha4" class="tg-3bjo" rowspan="2">Amanha+4</td>
+                            <td id="minSPamanha4" class="tg-z7ot"></td>
+                            <td class="tg-3bjo"></td>
+                        </tr>
+                        <tr>
+                            <td id="maxSPamanha4" class="tg-2w1e"></td>
+                            <td class="tg-3bjo"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <h3>São José dos Campos</h3>
+                <div <span style="color:gray;font-weight:bold">
+                    <p id="sjcWeather"> --- </p>
+                    <table class="tg">
+                        <tr>
+                            <th class="tg-3bjo"></th>
+                            <th class="tg-8hy5">Temperatura</th>
+                            <th class="tg-8hy5">Precipitação</th>
+                        </tr>
+                        <tr>
+                            <td id="amanhasjc" class="tg-3bjo" rowspan="2">Amanha</td>
+                            <td id="minSJCamanha" class="tg-z7ot"></td>
+                            <td class="tg-3bjo"></td>
+                        </tr>
+                        <tr>
+                            <td id="maxSJCamanha" class="tg-2w1e"></td>
+                            <td class="tg-3bjo"></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-0lax"></td>
+                            <td class="tg-0lax"></td>
+                            <td class="tg-0lax"></td>
+                        </tr>
+                        <tr>
+                            <td id="amanha1sjc" class="tg-3bjo" rowspan="2">Amanha+1</td>
+                            <td id="minSJCamanha1" class="tg-z7ot"></td>
+                            <td class="tg-3bjo"></td>
+                        </tr>
+                        <tr>
+                            <td id="maxSJCamanha1" class="tg-2w1e"></td>
+                            <td class="tg-3bjo"></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-0lax"></td>
+                            <td class="tg-0lax"></td>
+                            <td class="tg-0lax"></td>
+                        </tr>
+                        <tr>
+                            <td id="amanha2sjc" class="tg-3bjo" rowspan="2">Amanha+2</td>
+                            <td id="minSJCamanha2" class="tg-z7ot"></td>
+                            <td class="tg-3bjo"></td>
+                        </tr>
+                        <tr>
+                            <td id="maxSJCamanha2" class="tg-2w1e"></td>
+                            <td class="tg-3bjo"></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-0lax"></td>
+                            <td class="tg-0lax"></td>
+                            <td class="tg-0lax"></td>
+                        </tr>
+                        <tr>
+                            <td id="amanha3sjc" class="tg-3bjo" rowspan="2">Amanha+3</td>
+                            <td id="minSJCamanha3" class="tg-z7ot"></td>
+                            <td class="tg-3bjo"></td>
+                        </tr>
+                        <tr>
+                            <td id="maxSJCamanha3" class="tg-2w1e"></td>
+                            <td class="tg-3bjo"></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-0lax"></td>
+                            <td class="tg-0lax"></td>
+                            <td class="tg-0lax"></td>
+                        </tr>
+                        <tr>
+                            <td id="amanha4sjc" class="tg-3bjo" rowspan="2">Amanha+4</td>
+                            <td id="minSJCamanha4" class="tg-z7ot"></td>
+                            <td class="tg-3bjo"></td>
+                        </tr>
+                        <tr>
+                            <td id="maxSJCamanha4" class="tg-2w1e"></td>
+                            <td class="tg-3bjo"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <h3>Caraguatatuba</h3>
+                <div <span style="color:gray;font-weight:bold">
+                    <p id="caraguaWeather"> --- </p>
+                    <table class="tg">
+                        <tr>
+                            <th class="tg-3bjo"></th>
+                            <th class="tg-8hy5">Temperatura</th>
+                            <th class="tg-8hy5">Precipitação</th>
+                        </tr>
+                        <tr>
+                            <td id="amanhacr" class="tg-3bjo" rowspan="2">Amanha</td>
+                            <td id="minCRamanha" class="tg-z7ot"></td>
+                            <td class="tg-3bjo"></td>
+                        </tr>
+                        <tr>
+                            <td id="maxCRamanha" class="tg-2w1e"></td>
+                            <td class="tg-3bjo"></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-0lax"></td>
+                            <td class="tg-0lax"></td>
+                            <td class="tg-0lax"></td>
+                        </tr>
+                        <tr>
+                            <td id="amanha1cr" class="tg-3bjo" rowspan="2">Amanha+1</td>
+                            <td id="minCRamanha1" class="tg-z7ot"></td>
+                            <td class="tg-3bjo"></td>
+                        </tr>
+                        <tr>
+                            <td id="maxCRamanha1" class="tg-2w1e"></td>
+                            <td class="tg-3bjo"></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-0lax"></td>
+                            <td class="tg-0lax"></td>
+                            <td class="tg-0lax"></td>
+                        </tr>
+                        <tr>
+                            <td id="amanha2cr" class="tg-3bjo" rowspan="2">Amanha+2</td>
+                            <td id="minCRamanha2" class="tg-z7ot"></td>
+                            <td class="tg-3bjo"></td>
+                        </tr>
+                        <tr>
+                            <td id="maxCRamanha2" class="tg-2w1e"></td>
+                            <td class="tg-3bjo"></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-0lax"></td>
+                            <td class="tg-0lax"></td>
+                            <td class="tg-0lax"></td>
+                        </tr>
+                        <tr>
+                            <td id="amanha3cr" class="tg-3bjo" rowspan="2">Amanha+3</td>
+                            <td id="minCRamanha3" class="tg-z7ot"></td>
+                            <td class="tg-3bjo"></td>
+                        </tr>
+                        <tr>
+                            <td id="maxCRamanha3" class="tg-2w1e"></td>
+                            <td class="tg-3bjo"></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-0lax"></td>
+                            <td class="tg-0lax"></td>
+                            <td class="tg-0lax"></td>
+                        </tr>
+                        <tr>
+                            <td id="amanha4cr" class="tg-3bjo" rowspan="2">Amanha+4</td>
+                            <td id="minCRamanha4" class="tg-z7ot"></td>
+                            <td class="tg-3bjo"></td>
+                        </tr>
+                        <tr>
+                            <td id="maxCRamanha4" class="tg-2w1e"></td>
+                            <td class="tg-3bjo"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <h3>Bom Jardim de Minas</h3>
+                <div <span style="color:gray;font-weight:bold">
+                    <p id="bjWeather"> --- </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+
+    <br/>
+    <div> Informe o CEP
+        <input id="cep"> </div>
+    <br/>
+
+    <button onclick="PreencheCEP()">Pesquisar</button>
+
+    <h1>Informações do CEP informado</h1>
+
+    <p id="uf"> resultado</p>
+    <p id="cidade"> resultado</p>
+    <p id="bairro"> resultado</p>
+    <p id="rua"> resultado</p>
+
+
+    <br/>
+    <br/>
+
+    <h2>Informação da Bacia do Tietê</h2>
+
+
+    <p> Ultima atualizacao </p>
+    <p id="lastUpdate"> 01/01/1992</p>
+    </p:>
+    <p> Billings - Volume Útil: </p>
+    <p id="nivel"> --- </p>
+
+    <button onclick="bacias()"> Update </button>
+
+
+    <script type="text/javascript" src="forecastSP.js"></script>
+</body>
+
+</html>
+

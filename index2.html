@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Página de utilidades</title>
+
+    <style>
+        .container-pai {
+            flex-direction: column;
+            display: flex;
+            width: 340px;
+            height: 300px;
+            margin: 200px;
+            border-radius: 20px;
+            background-color: red;
+        }
+
+        .container-filho {
+            justify-content: space-between;
+            display: flex;
+            border-radius: 10px;
+            background-color: yellow;
+            width: 300px;
+            height: 100px;
+            margin: 20px;
+        }
+
+        .item-top {
+            border-radius: 15px;
+            background-color: blue;
+            color: rgb(162, 214, 235);
+            width: 100px;
+            height: 100px;
+            margin: 0px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 40px;
+        }
+
+        .item-bottom {
+            border-radius: 15px;
+            background-color: blue;
+            color: rgb(162, 214, 235);
+            width: 70px;
+            height: 70px;
+            margin: 15px 10px 15px 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 20px;
+        }
+    </style>
+
+</head>
+
+<body style="font-family: verdana">
+    <div class="container-pai">
+        <div class="container-filho" style="background-color: transparent">
+            <div class="item-top">Lula</div>
+            <div class="item-top">Lá</div>
+        </div>
+        <div class="container-filho">
+            <div class="item-bottom">Brilha</div>
+            <div class="item-bottom">Uma</div>
+            <div class="item-bottom">Estrela</div>
+        </div>
+    </div>
+</body>
+
+</html>
